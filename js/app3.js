@@ -1,8 +1,10 @@
+let score = 0;
 let Color = prompt('Is My favorite color orange?')
 let fColor = Color.toLowerCase()
 if (fColor === 'yes' || fColor === 'y') {
  // console.log('you are right i love orange!');
   alert('You are right I love the color orange!');
+  score = score + 1;
 
 } else if (fColor === 'no' || fColor === 'n') {
  // console.log('you are incorrect my favorite color is orange');
@@ -20,11 +22,12 @@ if (fSport === 'yes' || fSport === 'y') {
 } else if (fSport === 'no' || fSport === 'n') {
  //console.log('You are right! I actually love baseball!!');
   alert('You are right! I actually love baseball!!');
+  score = score + 1;
 
 } else {
   alert('invalid response try again')
 }
-let Food = prompt('Is my favorite food pizza?')  
+let Food = prompt('Is my favorite food burgers?')  
 let fFood = Food.toLowerCase()
 if (fFood === 'yes' || fFood === 'y') {
   //console.log('Nope you are incorrect my favorite food is sushi');
@@ -33,6 +36,7 @@ if (fFood === 'yes' || fFood === 'y') {
 } else if (fFood === 'no' || fFood === 'n') {
  //console.log('You are right! I actually love sushi');
   alert('You are right! I actually love sushi');
+  score = score + 1;
 
 } else {
   alert('invalid response try again')
@@ -42,6 +46,7 @@ let fPlace = Place.toLowerCase()
 if (fPlace === 'yes' || fPlace === 'y') {
   //console.log('you are right i love visiting Cuba!');
   alert('You are right I love visitng Cuba!');
+  score = score + 1;
 
 } else if (fPlace === 'no' || fPlace === 'n') {
   //console.log('you are incorrect my favorite place to travel is Cuba');
@@ -55,11 +60,69 @@ let fPT = PT.toLowerCase()
 if (fPT === 'yes' || fPT === 'y') {
   //console.log('you are right i love gaming!');
   alert('You are right I love gaming!');
+  score = score + 1;
 
-} else if (fPlace === 'no' || fPlace === 'n') {
+} else if (fPT === 'no' || fPT === 'n') {
   //console.log('you are incorrect my favorite passtime is gaming');
   alert('Nope you are incorrect my favorite passtime is gaming');
 
 } else {
   alert('invalid response try again')
 }
+
+let correct = false
+let guesses = 4
+let numberG = Math.floor((Math.random() * 100) + 1);
+console.log(numberG)
+let userGuess = prompt('Guess a number from 1-100')
+  while ( guesses > 0) {
+    if (userGuess == numberG) {
+      alert('You are right! Wow GREAT GUESS')
+      score = score + 1;
+      correct = true
+      break;
+    } else if (userGuess > numberG) {
+      guesses = guesses - 1
+      userGuess = prompt('too high, guess again: ')
+      
+    } else if (userGuess < numberG) {
+      guesses = guesses - 1
+      userGuess = prompt('too low, guess again: ')
+      
+    }
+                
+    if (correct) {
+      break;
+    } else if (guesses === 0) {
+      alert('Nice try, you are out of guesses, the number is ' + numberG);
+    }
+  }
+
+let correct1 = false
+let guesses1 = 6
+let favFoods = ['pizza', 'pasta', 'wings', 'sushi']
+let userGuess1 = prompt('Guess what else I like to eat:')
+  while ( guesses1 > 0) {
+    for(j = 0; j < favFoods.length; j++) {
+      if (userGuess1.toLowerCase() == favFoods[j]) {
+        alert('You are right! I love: ' + favFoods[j])
+        score = score + 1;
+        correct1 = true;
+        break;
+      } 
+    }
+    if (correct1) {
+      break;
+    }
+    guesses1 = guesses1 - 1
+    if (guesses1 > 0) {
+      userGuess1 = prompt('not quite, guess again: ')
+    }
+  }
+alert('my favorite foods are pizza, pasta, wings, and sushi!');
+alert('Out of 7 questions, you got ' + score +'/7!')
+alert('Refresh the page and try again for a higher score!');
+
+
+      
+   
