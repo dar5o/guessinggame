@@ -152,6 +152,8 @@ alert('my favorite foods are pizza, pasta, wings, and sushi!');
 alert('Out of 7 questions, you got ' + score +'/7!')
 alert('Refresh the page and try again for a higher score!');
 
+// booty
+
 
       
    
