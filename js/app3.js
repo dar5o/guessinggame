@@ -1,7 +1,4 @@
-
 let score = 0;
-
-function questionColor () {
   let Color = prompt('Is My favorite color orange?')
   let fColor = Color.toLowerCase()
   if (fColor === 'yes' || fColor === 'y') {
@@ -15,15 +12,15 @@ function questionColor () {
 
   } else {
     alert('invalid response try again')
-  }   
-}
+}   
+
 
 function questionSport () {
-  let Sport = prompt('Is my favorite sport basketball?')
-  let fSport = Sport.toLowerCase()
-  if (fSport === 'yes' || fSport === 'y') {
-  // console.log('Nope you are incorrect my favorite sport is baseball');
-    alert('Nope you are incorrect my favorite sport is baseball');
+let Sport = prompt('Is my favorite sport basketball?')
+let fSport = Sport.toLowerCase()
+if (fSport === 'yes' || fSport === 'y') {
+ // console.log('Nope you are incorrect my favorite sport is baseball');
+  alert('Nope you are incorrect my favorite sport is baseball');
 
   } else if (fSport === 'no' || fSport === 'n') {
   //console.log('You are right! I actually love baseball!!');
@@ -115,7 +112,6 @@ function questionNumberG () {
         alert('Nice try, you are out of guesses, the number is ' + numberG);
     }
   }
-}
 
 function questionFavFoods () {
 let correct = false
@@ -139,19 +135,6 @@ let userGuess = prompt('Guess what else I like to eat:')
       userGuess = prompt('not quite, guess again: ')
     }
   }
-}
-questionColor();
-questionSport();
-questionFood();
-questionPlace();
-questionPT();
-questionNumberG();
-questionFavFoods();
-
 alert('my favorite foods are pizza, pasta, wings, and sushi!');
 alert('Out of 7 questions, you got ' + score +'/7!')
 alert('Refresh the page and try again for a higher score!');
-
-
-      
-   
