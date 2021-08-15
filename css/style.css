@@ -9,3 +9,6 @@ background-color:#fff;
 height:1px;
 width:50%
 }
+p {
+  border-radius: 100%;
+}
