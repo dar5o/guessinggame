@@ -3,12 +3,10 @@ function questionColor () {
   let Color = prompt('Is My favorite color orange?')
   let fColor = Color.toLowerCase()
   if (fColor === 'yes' || fColor === 'y') {
-  // console.log('you are right i love orange!');
     alert('You are right I love the color orange!');
     score = score + 1;
 
   } else if (fColor === 'no' || fColor === 'n') {
-  // console.log('you are incorrect my favorite color is orange');
     alert('Nope you are incorrect my favorite color is orange');
 
   } else {
@@ -19,11 +17,9 @@ function questionSport () {
 let Sport = prompt('Is my favorite sport basketball?')
 let fSport = Sport.toLowerCase()
 if (fSport === 'yes' || fSport === 'y') {
- // console.log('Nope you are incorrect my favorite sport is baseball');
   alert('Nope you are incorrect my favorite sport is baseball');
 
   } else if (fSport === 'no' || fSport === 'n') {
-  //console.log('You are right! I actually love baseball!!');
     alert('You are right! I actually love baseball!!');
     score = score + 1;
 
@@ -37,11 +33,9 @@ function questionFood () {
   let Food = prompt('Is my favorite food burgers?')  
   let fFood = Food.toLowerCase()
   if (fFood === 'yes' || fFood === 'y') {
-    //console.log('Nope you are incorrect my favorite food is sushi');
     alert('Nope you are incorrect my favorite food is sushi');
 
   } else if (fFood === 'no' || fFood === 'n') {
-  //console.log('You are right! I actually love sushi');
     alert('You are right! I actually love sushi');
     score = score + 1;
 
@@ -54,12 +48,10 @@ function questionPlace () {
   let Place = prompt('Is my favorite place to travel Cuba?')
   let fPlace = Place.toLowerCase()
   if (fPlace === 'yes' || fPlace === 'y') {
-    //console.log('you are right i love visiting Cuba!');
     alert('You are right I love visitng Cuba!');
     score = score + 1;
 
   } else if (fPlace === 'no' || fPlace === 'n') {
-    //console.log('you are incorrect my favorite place to travel is Cuba');
     alert('Nope you are incorrect my favorite place to travel is Cuba');
 
   } else {
@@ -71,12 +63,10 @@ function questionPT () {
   let PT = prompt('Is my favorite passtime gaming?')
   let fPT = PT.toLowerCase()
   if (fPT === 'yes' || fPT === 'y') {
-    //console.log('you are right i love gaming!');
     alert('You are right I love gaming!');
     score = score + 1;
 
   } else if (fPT === 'no' || fPT === 'n') {
-    //console.log('you are incorrect my favorite passtime is gaming');
     alert('Nope you are incorrect my favorite passtime is gaming');
 
   } else {
@@ -86,7 +76,7 @@ function questionPT () {
 
 function questionNumberG () {
   let correct = false
-  let guesses = 4
+  let guesses = 3
   let numberG = Math.floor((Math.random() * 100) + 1);
   console.log(numberG)
   let userGuess = prompt('Guess a number from 1-100')
